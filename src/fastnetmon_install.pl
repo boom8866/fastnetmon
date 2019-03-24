@@ -12,7 +12,7 @@ my $pf_ring_version = '6.0.3';
 my $pf_ring_url = "https://github.com/ntop/PF_RING/archive/v$pf_ring_version.tar.gz";
 my $pf_ring_sha = '9fb8080defd1a079ad5f0097e8a8adb5bc264d00';
 
-my $fastnetmon_git_path = 'https://github.com/pavel-odintsov/fastnetmon.git';
+my $fastnetmon_git_path = 'https://github.com/boom8866/fastnetmon.git';
 
 my $temp_folder_for_building_project = `mktemp -d /tmp/fastnetmon.build.dir.XXXXXXXXXX`;
 chomp $temp_folder_for_building_project;
@@ -29,7 +29,7 @@ my $install_log_path = '/tmp/fastnetmon_install.log';
 
 # Official mirror: https://github.com/ntop/nDPI.git
 # But we have some patches for NTP and DNS protocols here
-my $ndpi_repository = 'https://github.com/pavel-odintsov/nDPI.git';
+my $ndpi_repository = 'https://github.com/boom8866/nDPI.git';
 
 my $stable_branch_name = 'v1.1.3';
 my $we_use_code_from_master = '';
@@ -37,7 +37,7 @@ my $we_use_code_from_master = '';
 # By default use mirror
 my $use_mirror = 1;
 
-my $mirror_url = 'https://github.com/pavel-odintsov/fastnetmon_dependencies/raw/master/files'; 
+my $mirror_url = 'https://github.com/boom8866/fastnetmon_dependencies/raw/master/files'; 
 
 my $os_type = '';
 my $distro_type = ''; 
@@ -136,7 +136,7 @@ sub welcome_message {
     print "https://fastnetmon.com/trial/\n\n";
     print color('reset');
 
-    print "In case of any issues with install script please use https://github.com/pavel-odintsov/fastnetmon to report them\n\n";
+    print "In case of any issues with install script please use https://github.com/boom8866/fastnetmon to report them\n\n";
 }
 
 sub get_logical_cpus_number {
@@ -218,7 +218,7 @@ sub main {
     }
 
     if ($os_type eq 'macosx') {
-        # Really strange issue https://github.com/pavel-odintsov/fastnetmon/issues/415 
+        # Really strange issue https://github.com/boom8866/fastnetmon/issues/415 
         $we_have_hiredis_support = 0;
     }
 
@@ -1601,4 +1601,3 @@ sub get_active_network_interfaces {
 
     return  @clean_interfaces;
 }
-
